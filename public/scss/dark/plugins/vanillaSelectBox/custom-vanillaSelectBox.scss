@@ -1,0 +1,126 @@
+@import '../../base/base';
+body.dark {
+.vsb-main button {
+  background: #1b2e4b !important;
+  color: #fff !important;
+  border-color: #1b2e4b !important;
+  box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+}
+.vsb-main > div .title {
+  color: #fff;
+}
+.vsb-menu {
+  background: #1b2e4b;
+  z-index: 599 !important;
+  border: 1px solid #191e39;
+}
+
+.vsb-js-search-zone {
+  background: #1b2e4b;
+
+  input {
+    background: #0e1726;
+    border: 1px solid #0e1726;
+    color: #fff;
+  }
+}
+
+.vsb-menu {
+  .multi li {
+    background: #1b2e4b;
+  }
+
+  li {
+    background: #1b2e4b;
+    color: #fafafa;
+    font-weight: 500;
+  }
+}
+
+.vsb-main li:hover {
+  background-color: #0e1726;
+}
+
+.vsb-menu {
+  li.grouped-option i {
+    color: #515365;
+  }
+
+  .multi li {
+    &[data-value="all"]:not(.grouped-option)::before {
+      color: #515365;
+    }
+
+    &:hover {
+      background-color: #0e1726;
+    }
+
+    &.grouped-option:hover {
+      background-color: #0e1726;
+      color: #bfc9d4;
+    }
+  }
+
+  li.grouped-option {
+    &.open span {
+      border-bottom: 2px solid #bfc9d4;
+      border-right: 2px solid #bfc9d4;
+    }
+
+    span:hover {
+      border-bottom: 2px solid $warning;
+      border-right: 2px solid $warning;
+    }
+
+    &.checked.checked i {
+      color: #515365;
+    }
+
+    &.checked i:after {
+      border-bottom: 2px solid $warning;
+      border-right: 2px solid $warning;
+    }
+  }
+
+  .multi li:not(.grouped-option).active::after {
+    margin-left: -16px;
+    margin-top: 4px;
+    height: 8px;
+    width: 4px;
+    border-bottom: 2px solid $warning;
+    border-right: 2px solid $warning;
+  }
+
+  ul {
+    scrollbar-color: #1b2e4b #1b2e4b;
+    scrollbar-width: thin;
+  }
+
+  &:hover ul {
+    scrollbar-color: #506690 #1b2e4b;
+    scrollbar-width: thin;
+  }
+
+  ul {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: #1b2e4b;
+    }
+
+    &::-webkit-scrollbar-thumb:vertical {
+      height: 30px;
+      background-color: #1b2e4b;
+      border-radius: 2px;
+    }
+  }
+
+  &:hover ul::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #506690;
+  }
+}
+}

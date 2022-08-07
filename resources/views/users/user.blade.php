@@ -1,0 +1,12 @@
+@extends('layouts.theme_table')
+@section('content')
+<div class="row layout-top-spacing">
+    <h2><?= $subtitle ?></h2>
+    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
+        <div class="widget-content widget-content-area br-8" id="contentData">
+         
+           
+        </div>
+    </div>
+</div>
+@endsection

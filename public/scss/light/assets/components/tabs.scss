@@ -1,0 +1,756 @@
+@import '../../base/base';
+.nav-tabs .dropdown:not(.custom-dropdown-icon):not(.custom-dropdown) .dropdown-menu.show, .nav-pills .dropdown:not(.custom-dropdown-icon):not(.custom-dropdown) .dropdown-menu.show {
+  top: 36px !important;
+}
+
+.nav-tabs {
+  svg {
+    width: 20px;
+    vertical-align: bottom;
+    margin-right: 5px;
+  }
+
+  .nav-link {
+    &.active {
+      color: #e95f2b;
+      background-color: #fff;
+      border-color: #e0e6ed #e0e6ed #fff;
+
+      &:after {
+        color: #e95f2b;
+      }
+    }
+
+    &:focus, &:hover {
+      border-color: #e0e6ed #e0e6ed #fff!important;
+    }
+  }
+
+  border-bottom: 1px solid #ebedf2;
+}
+
+.dropdown-menu {
+  box-shadow: 0px 0px 15px 1px rgba(113, 106, 202, 0.1);
+}
+
+.nav-tabs {
+  .dropdown-item:hover {
+    background-color: #f1f2f3;
+    color: #515365;
+  }
+
+  li a.disabled {
+    color: #b1b2be !important;
+  }
+}
+
+.nav-pills {
+  .nav-item:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  .nav-link {
+    &.active:after {
+      color: #fff;
+    }
+
+    color: $dark;
+  }
+
+  .show > .nav-link {
+    background-color: #e95f2b;
+  }
+
+  li a.disabled {
+    color: #b1b2be !important;
+  }
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+/*
+    Simple Tab
+*/
+
+.simple-tab .nav-tabs {
+  li a {
+    color: $dark;
+  }
+
+  .nav-item.show .nav-link, .nav-link.active {
+    color: $primary;
+    font-weight: 600;
+    background-color: #fff;
+    border-color: #e0e6ed #e0e6ed #fff;
+  }
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #e0e6ed;
+}
+
+.simple-tab .tab-content > .tab-pane {
+  padding: 20px 0 0 0;
+}
+
+/*
+    Simple Pills
+*/
+
+.simple-pills {
+  .nav-pills {
+    li a {
+      color: $dark;
+    }
+
+    .nav-link.active, .show > .nav-link {
+      background-color: $primary;
+      border-color: transparent;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Icon Tab
+*/
+
+.icon-tab {
+  .nav-tabs {
+    li a {
+      color: $dark;
+    }
+
+    svg {
+      width: 20px;
+      vertical-align: bottom;
+    }
+
+    .nav-item.show .nav-link, .nav-link.active {
+      color: #e95f2b;
+      background-color: transparent;
+      border-color: #e0e6ed #e0e6ed #fff;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Icon Pill
+*/
+
+.icon-pill {
+  .nav-pills {
+    li a {
+      color: $dark;
+    }
+
+    svg {
+      width: 20px;
+      vertical-align: bottom;
+    }
+
+    .nav-link.active, .show > .nav-link {
+      background-color: $warning;
+      color: #fff;
+      border-color: transparent;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Underline
+*/
+
+.underline-content {
+  .nav-tabs {
+    border-bottom: 1px solid #e0e6ed;
+
+    li a {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+
+  .nav-tabs {
+    .nav-link.active, .show > .nav-link {
+      border-color: transparent;
+      border-bottom: 1px solid $secondary;
+      color: $secondary;
+      background-color: transparent;
+    }
+
+    .nav-link.active:hover, .show > .nav-link:hover, .nav-link.active:focus, .show > .nav-link:focus {
+      border-color: #fff #fff #fff !important;
+    }
+
+    .nav-link.active:hover, .show > .nav-link:hover, .nav-link.active:focus, .show > .nav-link:focus {
+      border-bottom: 1px solid $secondary!important;
+    }
+
+    .nav-link {
+      &:focus, &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+/*
+    Animated Underline
+*/
+
+.animated-underline-content {
+  .nav-tabs {
+    border-bottom: 1px solid #e0e6ed;
+
+    li a {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      position: relative;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+
+  .nav-tabs {
+    .nav-link.active, .show > .nav-link {
+      border-color: transparent;
+      color: $secondary;
+    }
+
+    .nav-link {
+      &:focus, &:hover {
+        border-color: transparent!important;
+      }
+
+      &.active:before {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      &:before {
+        content: "";
+        height: 1px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: $secondary;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        transition: all .3s;
+      }
+    }
+  }
+}
+
+/*
+    Justify Tab
+*/
+
+.justify-tab {
+  .nav-tabs {
+    li a {
+      color: $dark;
+    }
+
+    .nav-item.show .nav-link, .nav-link.active {
+      color: $primary;
+      background-color: #fff;
+      border-color: #e0e6ed #e0e6ed #fff;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Justify Pill
+*/
+
+.justify-pill {
+  .nav-pills {
+    li a {
+      color: $dark;
+    }
+
+    .nav-link.active, .show > .nav-link {
+      background-color: $info;
+      border-color: transparent;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Justify Centered Tab
+*/
+
+.tab-justify-centered {
+  .nav-tabs {
+    li a {
+      color: $dark;
+    }
+
+    .nav-item.show .nav-link, .nav-link.active {
+      color: #e95f2b;
+      background-color: #fff;
+      border-color: #e0e6ed #e0e6ed #fff;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Justify Centered Pill
+*/
+
+.pill-justify-centered {
+  .nav-pills {
+    li a {
+      color: $dark;
+    }
+
+    .nav-link.active, .show > .nav-link {
+      background-color: $warning;
+      color: #fff;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Justify Right Tab
+*/
+
+.tab-justify-right {
+  .nav-tabs {
+    li a {
+      color: $dark;
+    }
+
+    .nav-item.show .nav-link, .nav-link.active {
+      color: $primary;
+      background-color: #fff;
+      border-color: #e0e6ed #e0e6ed #fff
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Justify Right Pill
+*/
+
+.pill-justify-right {
+  .nav-pills {
+    .nav-link.active, .show > .nav-link {
+      background-color: $info;
+      color: #fff;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    With Icons   
+*/
+
+.rounded-pills-icon {
+  .nav-pills {
+    li a {
+      -webkit-border-radius: 0.625rem !important;
+      -moz-border-radius: 0.625rem !important;
+      -ms-border-radius: 0.625rem !important;
+      -o-border-radius: 0.625rem !important;
+      border-radius: 0.625rem !important;
+      background-color: #f1f2f3;
+      width: 100px;
+      padding: 8px;
+      color: #3b3f5c;
+
+      svg {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &:hover {
+        svg {
+          color: #888ea8;
+        }
+        
+      }
+      
+    }
+
+    .nav-link.active, .show > .nav-link {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+      background-color: #009688;
+
+      &:hover {
+        svg {
+          color: #0e1726;
+        }
+      }
+      
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Vertical With Icon
+*/
+
+.rounded-vertical-pills-icon .nav-pills {
+  a {
+    -webkit-border-radius: 0.625rem !important;
+    -moz-border-radius: 0.625rem !important;
+    -ms-border-radius: 0.625rem !important;
+    -o-border-radius: 0.625rem !important;
+    border-radius: 0.625rem !important;
+    background-color: #fff;
+    border: 1px solid #e0e6ed;
+    padding: 11px 23px;
+    text-align: center;
+    width: 100px;
+    padding: 8px;
+
+    svg {
+      display: block;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .nav-link.active, .show > .nav-link {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+    background-color: #009688;
+    border-color: transparent;
+  }
+}
+
+/*
+    Rouned Circle With Icons   
+*/
+
+.rounded-circle-pills-icon {
+  .nav-pills {
+    li a {
+      background-color: #f1f2f3;
+      padding: 20px 20px;
+
+      svg {
+        display: block;
+        text-align: center;
+        color: #3b3f5c;
+      }
+
+      &:hover {
+        svg {
+          color: #888ea8;
+        }
+      }
+      
+    }
+
+    .nav-link.active, .show > .nav-link {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+      background-color: $info;
+      
+      svg {
+        color: #fff;
+      }
+
+      &:hover {
+        svg {
+          color: #3b3f5c;
+        }
+      }
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+}
+
+/*
+    Vertical Rounded Circle With Icon
+*/
+
+.rounded-circle-vertical-pills-icon .nav-pills {
+  a {
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid 1px #e0e6ed;
+    height: 58px;
+    width: 60px;
+    padding: 16px 18px;
+    max-width: 80px;
+    min-width: auto;
+
+    svg {
+      display: block;
+      text-align: center;
+      line-height: 19px;
+    }
+  }
+
+  .nav-link.active, .show > .nav-link {
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+    background-color: $info;
+    border-color: transparent;
+  }
+}
+
+/*
+    Vertical Pill
+*/
+
+.vertical-pill .nav-pills {
+  .nav-link.active, .show > .nav-link {
+    background-color: #009688;
+  }
+}
+
+/*
+    Vertical Pill Right
+*/
+
+.vertical-pill-right .nav-pills {
+  .nav-link.active, .show > .nav-link {
+    background-color: #009688;
+  }
+}
+
+/*
+    Creative vertical pill
+*/
+
+.vertical-line-pill {
+  .nav-pills {
+    border-bottom: 1px solid transparent;
+    width: 92px;
+    border-right: 1px solid #e0e6ed;
+
+    a {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      position: relative;
+    }
+
+    .nav-link {
+      padding: .5rem 0;
+
+      &.active {
+        position: relative;
+        background-color: transparent;
+        border-color: transparent;
+        color: $secondary;
+        font-weight: 600;
+      }
+    }
+
+    .show > .nav-link {
+      position: relative;
+      background-color: transparent;
+      border-color: transparent;
+      color: $secondary;
+      font-weight: 600;
+    }
+
+    .nav-link {
+      &:focus, &:hover {
+        border-color: transparent;
+      }
+
+      &.active:before {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        bottom: 0;
+      }
+
+      &:before {
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 1px;
+        right: -1px;
+        background-color: $secondary;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        transition: all .3s;
+      }
+    }
+  }
+
+  #v-line-pills-tabContent {
+    h4 {
+      color: $warning;
+    }
+
+    p {
+      color: #888ea8;
+    }
+  }
+}
+
+.media img {
+  border-radius: 50%;
+  border: solid 5px #e0e6ed;
+  width: 80px;
+  height: 80px;
+}
+
+/*
+    Border Tab
+*/
+
+.border-tab .tab-content {
+  border: 1px solid #e0e6ed;
+  border-top: none;
+  padding: 10px;
+
+  > .tab-pane {
+    padding: 20px 30px 0 30px;
+  }
+
+  .media img.meta-usr-img {
+    margin-left: -30px;
+  }
+}
+
+/*
+    Vertical Border Tab
+*/
+
+.vertical-border-pill .nav-pills {
+  width: 92px;
+
+  a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+
+  .nav-link {
+    padding: .5rem 0;
+    border: 1px solid #e0e6ed;
+    border-radius: 0;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid #e0e6ed;
+    }
+
+    &.active {
+      position: relative;
+      color: #fff;
+      background-color: $secondary;
+    }
+  }
+
+  .show > .nav-link {
+    position: relative;
+    color: #fff;
+    background-color: #00ab55;
+  }
+}
+
+/*
+    Border Top Tab
+*/
+
+.border-top-tab {
+  .nav-tabs {
+    border-bottom: 1px solid transparent;
+
+    li a {
+      border-radius: 0px;
+      padding: 12px 30px;
+      color: #0e1726;
+      border-right: 1px solid transparent;
+      background: #ebedf2;
+    }
+  }
+
+  .tab-content > .tab-pane {
+    padding: 20px 0 0 0;
+  }
+
+  .nav-tabs {
+    .nav-item.show .nav-link {
+      color: #495057;
+      border-radius: 0px;
+      padding: 12px 30px;
+      background: #191e3a;
+      color: #e0e6ed;
+      border: 1px solid transparent;
+      border-top: 2px solid #e0e6ed;
+    }
+
+    .nav-link {
+      &.active {
+        color: #495057;
+        border-radius: 0px;
+        padding: 12px 30px;
+        background: #ebedf2;
+        color: $secondary;
+        border: 1px solid transparent;
+        border-top: 2px solid $secondary;
+      }
+
+      &:focus, &:hover {
+        border: 1px solid transparent!important;
+        border-top: 2px solid #805dca!important;
+      }
+    }
+  }
+}

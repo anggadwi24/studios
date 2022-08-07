@@ -1,0 +1,125 @@
+@import '../../base/base';
+.vsb-main button {
+  background: #fff!important;
+  color: #1b2e4b !important;
+  border-color: #e0e6ed !important;
+  box-shadow: 0 0 40px 0 rgb(94 92 154 / 6%);
+}
+.vsb-main > div .title {
+  color: #000;
+}
+.vsb-menu {
+  background: #fff;
+  z-index: 599 !important;
+  box-shadow: none;
+  border: 1px solid #e0e6ed;
+}
+
+.vsb-js-search-zone {
+  background: #fff;
+
+  input {
+    background: #f1f2f3;
+    border: 1px solid #e0e6ed;
+    color: $dark;
+  }
+}
+
+.vsb-menu {
+  .multi li {
+    background: #fff;
+  }
+
+  li {
+    background: #fff;
+    color: $dark;
+    font-weight: 500;
+  }
+}
+
+.vsb-main li:hover {
+  background-color: #ebedf2;
+}
+
+.vsb-menu {
+  li.grouped-option i {
+    color: #515365;
+  }
+
+  .multi li {
+    &[data-value="all"]:not(.grouped-option)::before {
+      color: #515365;
+    }
+
+    &:hover {
+      background-color: #ebedf2;
+    }
+
+    &.grouped-option:hover {
+      background-color: #ebedf2;
+      color: $primary;
+    }
+  }
+
+  li.grouped-option {
+    &.open span {
+      border-bottom: 2px solid #bfc9d4;
+      border-right: 2px solid #bfc9d4;
+    }
+
+    span:hover {
+      border-bottom: 2px solid $primary;
+      border-right: 2px solid $primary;
+    }
+
+    &.checked.checked i {
+      color: #515365;
+    }
+
+    &.checked i:after {
+      border-bottom: 2px solid $primary;
+      border-right: 2px solid $primary;
+    }
+  }
+
+  .multi li:not(.grouped-option).active::after {
+    margin-left: -16px;
+    margin-top: 4px;
+    height: 8px;
+    width: 4px;
+    border-bottom: 2px solid $primary;
+    border-right: 2px solid $primary;
+  }
+
+  ul {
+    scrollbar-color: #fff #fff;
+    scrollbar-width: thin;
+  }
+
+  &:hover ul {
+    scrollbar-color: #bfc9d4 #fff;
+    scrollbar-width: thin;
+  }
+
+  ul {
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track-piece {
+      background-color: #fff;
+    }
+
+    &::-webkit-scrollbar-thumb:vertical {
+      height: 30px;
+      background-color: #fff;
+      border-radius: 2px;
+    }
+  }
+
+  &:hover ul::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #bfc9d4;
+  }
+}
